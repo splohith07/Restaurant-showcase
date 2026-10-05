@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 85px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+
+header nav a {
+    font-size: 13px;
+}
+
+.back {
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: inherit;
+    transition: all 0.25s ease;
+}
+
+.back:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateX(-3px);
+}
+
+.brand {
+    font-family: "Playfair Display";
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.reserve {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.reserve:hover {
+    transform: translateY(-2px);
+}
+
+.demo-hero {
+    min-height: 850px;
+
+    padding: 150px 8%;
+
+    display: flex;
+    align-items: center;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.demo-hero>div {
+    max-width: 750px;
+}
+
+.demo-hero small,
+.eyebrow {
+    letter-spacing: 3px;
+    font-size: 10px;
+}
+
+.demo-hero h1 {
+    font-family: "Playfair Display";
+    font-size: clamp(60px, 8vw, 105px);
+    line-height: .9;
+
+    margin: 25px 0;
+}
+
+.demo-hero p {
+    max-width: 500px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.demo-btn,
+.outline-btn {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    transition: all 0.25s ease;
+}
+
+.demo-section {
+    padding: 120px 8%;
+}
+
+.demo-section h2,
+.about h2,
+.reservation h2 {
+    font-family: "Playfair Display";
+    font-size: clamp(45px, 6vw, 75px);
+
+    margin: 15px 0 50px;
+}
+
+.menu-grid {
+    max-width: 1100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1px;
+}
+
+.menu-item {
+    padding: 35px;
+
+    border: 1px solid rgba(128, 128, 128, .25);
+}
+
+.menu-item h3 {
+    font-family: "Playfair Display";
+    font-size: 24px;
+}
+
+.menu-item p {
+    line-height: 1.7;
+    opacity: .65;
+    margin: 10px 0;
+}
+
+.menu-item strong {
+    font-size: 15px;
+}
+
+.about {
+    min-height: 600px;
+
+    padding: 120px 8%;
+
+    display: flex;
+    align-items: center;
+}
+
+.about>div {
+    max-width: 650px;
+}
+
+.about p {
+    line-height: 1.9;
+    max-width: 600px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.reservation {
+    padding: 130px 8%;
+    text-align: center;
+}
+
+.reservation p {
+    margin-bottom: 30px;
+}
+
+footer {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+footer h3 {
+    font-family: "Playfair Display";
+    font-size: 25px;
+}
+
+footer p {
+    margin-top: 10px;
+    opacity: .6;
+}
+
+
+/* LUXURY */
+
+.luxury {
+    background: #101010;
+    color: #eee;
+}
+
+.luxury header {
+    background: rgba(10, 10, 10, .3);
+}
+
+.luxury .demo-hero {
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .25)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85") center/cover;
+}
+
+.luxury .demo-btn {
+    background: #d6b46c;
+    color: #111;
+}
+
+.luxury .outline-btn,
+.luxury .reserve {
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.luxury .outline-btn:hover,
+.luxury .reserve:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.luxury .eyebrow,
+.luxury .demo-hero small {
+    color: #d6b46c;
+}
+
+.luxury .about {
+    background: #181818;
+}
+
+.luxury footer {
+    background: #080808;
+}
+
+
+/* LIGHT */
+
+.light {
+    background: #f8f4eb;
+    color: #27231d;
+}
+
+.light .demo-hero {
+    background:
+        linear-gradient(90deg, rgba(248, 244, 235, .9), rgba(248, 244, 235, .2)),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=85") center/cover;
+}
+
+.light .demo-btn {
+    background: #29251f;
+    color: white;
+}
+
+.light .outline-btn {
+    border: 1.5px solid #29251f;
+    color: #29251f;
+    background: rgba(41, 37, 31, 0.05);
+}
+
+.light .outline-btn:hover {
+    background: #29251f;
+    color: #ffffff;
+    border-color: #29251f;
+}
+
+.light .eyebrow {
+    color: #927341;
+}
+
+.light .about {
+    background: #eee6d7;
+}
+
+
+/* NATURAL */
+
+.natural {
+    background: #f1eee4;
+    color: #26352a;
+}
+
+.natural .demo-hero {
+    background:
+        linear-gradient(90deg, rgba(35, 55, 38, .82), rgba(35, 55, 38, .15)),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=2000&q=85") center/cover;
+
+    color: white;
+}
+
+.natural .demo-btn {
+    background: #78936b;
+    color: white;
+}
+
+.natural .outline-btn {
+    border: 1.5px solid #26352a;
+    color: #26352a;
+    background: rgba(120, 147, 107, 0.12);
+}
+
+.natural .outline-btn:hover {
+    background: #78936b;
+    color: #ffffff;
+    border-color: #78936b;
+}
+
+.natural .demo-hero .outline-btn {
+    border: 1.5px solid rgba(255, 255, 255, 0.75);
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.natural .demo-hero .outline-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.natural .eyebrow {
+    color: #78936b;
+}
+
+.natural .about {
+    background: #dce3d3;
+}
+
+
+/* BOLD */
+
+.bold {
+    background: #fff4e9;
+    color: #24150e;
+}
+
+.bold .demo-hero {
+    background:
+        linear-gradient(90deg, rgba(90, 20, 5, .88), rgba(90, 20, 5, .2)),
+        url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=2000&q=85") center/cover;
+
+    color: white;
+}
+
+.bold .demo-btn {
+    background: #ef641d;
+    color: white;
+}
+
+.bold .outline-btn {
+    border: 1.5px solid #24150e;
+    color: #24150e;
+    background: rgba(239, 100, 29, 0.1);
+}
+
+.bold .outline-btn:hover {
+    background: #ef641d;
+    color: #ffffff;
+    border-color: #ef641d;
+}
+
+.bold .demo-hero .outline-btn {
+    border: 1.5px solid rgba(255, 255, 255, 0.75);
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.bold .demo-hero .outline-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.bold .eyebrow {
+    color: #e45d19;
+}
+
+.bold .about {
+    background: #25150d;
+    color: white;
+}
+
+
+/* CAFE */
+
+.cafe {
+    background: #f5ede1;
+    color: #33251d;
+}
+
+.cafe .demo-hero {
+    background:
+        linear-gradient(90deg, rgba(50, 30, 15, .78), rgba(50, 30, 15, .15)),
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2000&q=85") center/cover;
+
+    color: white;
+}
+
+.cafe .demo-btn {
+    background: #8c6745;
+    color: white;
+}
+
+.cafe .outline-btn {
+    border: 1.5px solid #33251d;
+    color: #33251d;
+    background: rgba(140, 103, 69, 0.12);
+}
+
+.cafe .outline-btn:hover {
+    background: #8c6745;
+    color: #ffffff;
+    border-color: #8c6745;
+}
+
+.cafe .demo-hero .outline-btn {
+    border: 1.5px solid rgba(255, 255, 255, 0.75);
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.cafe .demo-hero .outline-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.cafe .eyebrow {
+    color: #8c6745;
+}
+
+.cafe .about {
+    background: #e9dccb;
+}
+
+
+@media(max-width:700px) {
+
+    header {
+        height: 70px;
+        padding: 0 5%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .demo-hero {
+        min-height: 750px;
+        padding: 120px 6% 80px;
+    }
+
+    .demo-section,
+    .about,
+    .reservation {
+        padding: 80px 6%;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 350px;
+    }
+
+}
