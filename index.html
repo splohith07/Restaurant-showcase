@@ -1,38 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>
         Royal Restaurant| Premium Restaurant Websites
     </title>
-
-
     <!-- Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
-
-
     <!-- Main CSS -->
-
     <link rel="stylesheet" href="style.css">
-
 </head>
-
-
 <body>
-
-
     <!-- =========================
          NAVIGATION
     ========================== -->
@@ -40,38 +23,51 @@
     <header class="navbar">
 
         <a href="index.html" class="logo">
-
             <span>R</span>
             Royal Restaurant
         </a>
 
         <nav>
-
             <a href="#themes">
                 Themes
             </a>
-
             <a href="#features">
                 Features
             </a>
-
             <a href="#contact">
                 Contact
             </a>
-
         </nav>
 
-
         <a href="#contact" class="nav-button">
-
             Start a Project
-
         </a>
 
+        <!-- Hamburger toggle button -->
+        <button id="mobileMenuToggle" class="mobile-menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
     </header>
-
-
-
+    <!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+    <div id="mobileNavBackdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
+    <div id="mobileNavDrawer" class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="logo">
+                <span>R</span> Royal Restaurant
+            </a>
+            <button id="closeMobileMenuBtn" class="mobile-nav-close-btn" type="button" aria-label="Close navigation menu">&times;</button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="#themes" class="mobile-nav-link"><span>Themes</span><span class="link-arrow">→</span></a>
+            <a href="#features" class="mobile-nav-link"><span>Features</span><span class="link-arrow">→</span></a>
+            <a href="#contact" class="mobile-nav-link"><span>Contact</span><span class="link-arrow">→</span></a>
+        </nav>
+        <div class="mobile-nav-footer">
+            <a href="#contact" class="mobile-nav-cta">Start a Project</a>
+        </div>
+    </div>
     <!-- =========================
          HERO
     ========================== -->
@@ -331,29 +327,16 @@
 
 
                 </div>
-
-
-
                 <div class="theme-info">
-
-
                     <div>
-
                         <h3>
                             Natural
                         </h3>
-
-
                         <p>
-
                             Earthy and fresh design for
                             vegetarian restaurants.
-
                         </p>
-
                     </div>
-
-
                     <a href="natural.html" class="demo-button">
 
                         View Demo →
@@ -365,8 +348,6 @@
 
 
             </article>
-
-
 
             <!-- =====================
                  BOLD FOOD
@@ -775,36 +756,18 @@
 
 
         <h3>
-
             Royal Restaurant
-
         </h3>
-
-
         <p>
-
             Premium websites for restaurants
             & food businesses.
-
         </p>
-
-
         <small>
-
             © 2026 Royal Restaurant
-
         </small>
-
-
     </footer>
-
-
-
     <!-- JavaScript -->
-
     <script src="script.js"></script>
-
-
 </body>
 
 </html>
